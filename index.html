@@ -52,22 +52,23 @@
 </head>
 <body>
   <h1>Whisper Transcription Tool</h1>
-  <label>Enter your OpenAI API Key:</label><br>
-  <input type="password" id="apiKey" placeholder="sk-..." /><br>
+  <label>1) Enter your OpenAI API Key:</label><br>
   <small>Generate your API key <a href="https://platform.openai.com/settings/organization/api-keys" target="_blank">here</a>.</small><br><br>
-
-  <label>Select an audio file:</label><br>
+  <input type="password" id="apiKey" placeholder="sk-..." /><br>
+  <small style="color: red;"> Never paste API keys willy nilly on public websites.</small> <small>This site is a strictly client side script used for convenience and doesn't store your key.</small> 
+  <small>Still use caution and a temporary key for safety.</small>
+  <small>See the source of this tool at the <a href="https://github.com/cayspekko/whisper_tool" target="_blank">GitHub repository</a>.</small><br><br>
+  
+  <label>2) Select an audio file:</label><br>
   <input type="file" id="audioFile" accept="audio/*" /><br><br>
 
-  <label>Enter language code (optional):</label><br>
+  <label>3) Enter language code (optional):</label><br>
   <input type="text" id="languageCode" placeholder="e.g., en for English, ja for Japanese" maxlength="2" /><br>
   <small>Refer to the <a href="https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes" target="_blank">ISO 639-1 codes</a> for supported language codes.</small><br><br>
 
-  <button onclick="transcribe()">Transcribe</button>
+  <button onclick="transcribe()">4) Transcribe</button>
 
   <pre id="result"></pre>
-
-  <p>See the source of this tool at the <a href="https://github.com/cayspekko/whisper_tool" target="_blank">GitHub repository</a>.</p>
 
   <script>
     async function transcribe() {
