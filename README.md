@@ -1,2 +1,4 @@
-# whisper_tool
-simple tool for easily transcribing mp3s. It's just a quick and easy way I use to transcribe Suno songs so It's easier for me to "replace section"
+# Simple whisper tool
+To use the whisper_tool.py with large file chunking support, please ensure ffmpeg is installed: `brew install ffmpeg`
+
+You need to provie your api keys and modify the script

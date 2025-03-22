@@ -53,7 +53,8 @@
 <body>
   <h1>Whisper Transcription Tool</h1>
   <label>Enter your OpenAI API Key:</label><br>
-  <input type="password" id="apiKey" placeholder="sk-..." /><br><br>
+  <input type="password" id="apiKey" placeholder="sk-..." /><br>
+  <small>Generate your API key <a href="https://platform.openai.com/settings/organization/api-keys" target="_blank">here</a>.</small><br><br>
 
   <label>Select an audio file:</label><br>
   <input type="file" id="audioFile" accept="audio/*" /><br><br>
@@ -65,6 +66,8 @@
   <button onclick="transcribe()">Transcribe</button>
 
   <pre id="result"></pre>
+
+  <p>See the source of this tool at the <a href="https://github.com/cayspekko/whisper_tool" target="_blank">GitHub repository</a>.</p>
 
   <script>
     async function transcribe() {
